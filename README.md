@@ -1,8 +1,7 @@
-origin: https://github.com/eishare/Node.js
 
 https://github.com/eooce
 
-Thank eooce and eishare.
+Thank eooce
 
 
 ```bash
