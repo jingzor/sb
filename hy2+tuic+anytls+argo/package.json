@@ -1,0 +1,13 @@
+{
+  "name": "sb-deploy",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "dependencies": {
+    "axios": "^1.7.9",
+    "selfsigned": "^2.4.1"
+  }
+}
