@@ -266,17 +266,13 @@ main().catch(console.error);
 
 1. 安装依赖：
 
-   Bash
-
-   ```
+   ```Bash
    npm install
    ```
 
 2. 运行部署（可以通过环境变量控制端口和隧道）：
 
-   Bash
-
-   ```
+   ```Bash
    # 示例：同时启用 Hysteria2 (端口 30000) 和 TUIC (端口 30001)，AnyTLS 默认 8443
    HY2_PORT=30000 TUIC_PORT=30001 node index.js
    ```
@@ -350,8 +346,6 @@ TypeError: The argument 'stdio' is invalid. Received WriteStream {
 ```
 
 **修改为：**
-
-
 
 ```JavaScript
     // 启动 cloudflared
