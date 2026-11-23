@@ -14,7 +14,7 @@ index.js同目录下创建.npm文件夹，二进制、节点链接等文件统�
 
 增加部署anytls节点，端口号可以与hysteria2/tuic共存，密码和hysteria2共用，证书和hysteria2共用
 
-增加部署vless+ws搭配cloudflared隧道节点，uuid和tuicUUID共用，ARGO_TOKEN有填写就启用节点，ARGO_DOMAIN可填可不填，ARGO_PORT默认8080，WS_PATH随机生成
+增加部署vless+ws搭配cloudflared隧道节点（不需要额外下载cloudflared二进制，sing-box已经内置了），uuid和tuicUUID共用，ARGO_TOKEN有填写就启用节点，ARGO_DOMAIN可填可不填，ARGO_PORT默认8080，WS_PATH随机生成
 
 密码、uuid、WS_PATH存到.npm/state.json里面，重启可复用
 
