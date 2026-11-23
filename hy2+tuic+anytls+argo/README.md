@@ -2,7 +2,7 @@
 ```
 编写nodejs代码index.js和package.json，
 
-axios下载https://github.com/SagerNet/sing-box/releases/download/v1.14.4/sing-box-1.14.4-linux-amd64-musl.tar.gz,
+axios 流式下载 https://github.com/SagerNet/sing-box/releases/download/v1.14.4/sing-box-1.14.4-linux-amd64-musl.tar.gz,
 
 部署在nodejs主机上，只考虑linux系统amd64和arm64。
 
@@ -14,7 +14,7 @@ index.js同目录下创建.npm文件夹，二进制、节点链接等文件统�
 
 增加部署anytls节点，端口号可以与hysteria2/tuic共存，密码和hysteria2共用，证书和hysteria2共用
 
-增加部署vless+ws搭配cloudflared隧道节点，uuid和tuicUUID共用，ARGO_TOKEN有填写就固定隧道，没有就临时隧道，ARGO_DOMAIN可填可不填，ARGO_PORT默认8080，WS_PATH随机生成，cloudflared只把日志写到.npm/argo.log，临时隧道域名从.npm/argo.log获取
+增加部署vless+ws搭配cloudflared隧道节点，uuid和tuicUUID共用，ARGO_TOKEN有填写就启用节点，ARGO_DOMAIN可填可不填，ARGO_PORT默认8080，WS_PATH随机生成
 
 密码、uuid、WS_PATH存到.npm/state.json里面，重启可复用
 
