@@ -3,6 +3,7 @@ https://github.com/eooce
 
 Thank eooce
 
+https://signin.aws.amazon.com/signup?request_type=builderId
 
 ```bash
 echo "root:此处修改为你的root密码" | chpasswd root && sed -i 's/^#\?PermitRootLogin.*/PermitRootLogin yes/g' /etc/ssh/sshd_config && sed -i 's/^#\?PasswordAuthentication.*/PasswordAuthentication yes/g' /etc/ssh/sshd_config && sed -i 's|^Include /etc/ssh/sshd_config.d/\*.conf|#&|' /etc/ssh/sshd_config && systemctl restart ssh
