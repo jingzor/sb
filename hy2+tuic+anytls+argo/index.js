@@ -14,7 +14,7 @@ const CONFIG_FILE = path.join(NPM_DIR, 'config.json');
 const ARGO_LOG = path.join(NPM_DIR, 'argo.log');
 const LINKS_FILE = path.join(NPM_DIR, 'links.txt');
 
-// 1. 状态管理（持久化密码、UUID、WS_PATH）
+// 状态管理（持久化密码、UUID、WS_PATH）
 let state = {};
 if (fs.existsSync(STATE_FILE)) {
     try { state = JSON.parse(fs.readFileSync(STATE_FILE, 'utf8')); } catch (e) {}
@@ -24,7 +24,7 @@ state.uuid = state.uuid || crypto.randomUUID();
 state.wsPath = state.wsPath || '/' + crypto.randomBytes(4).toString('hex');
 fs.writeFileSync(STATE_FILE, JSON.stringify(state, null, 2));
 
-// 2. 下载二进制文件
+// 下载二进制文件
 async function downloadBinaries() {
     const arch = os.arch() === 'arm64' ? 'arm64' : 'amd64';
     const singBoxBin = path.join(NPM_DIR, 'sing-box');
@@ -66,7 +66,7 @@ async function downloadBinaries() {
     }
 }
 
-// 3. 自签证书与 SHA-256 指纹计算
+// 自签证书与 SHA-256 指纹计算
 function setupCertificate() {
     const certPath = path.join(NPM_DIR, 'cert.pem');
     const keyPath = path.join(NPM_DIR, 'key.pem');
@@ -85,7 +85,7 @@ function setupCertificate() {
     return hash.match(/.{2}/g).join(':').toUpperCase();
 }
 
-// 4. 保存并打印链接
+// 保存并打印链接
 function saveAndPrintLinks(links) {
     fs.writeFileSync(LINKS_FILE, links.join('\n') + '\n', 'utf8');
     console.log('\n================= 节点协议链接 =================');
